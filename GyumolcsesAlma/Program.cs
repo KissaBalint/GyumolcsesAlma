@@ -10,6 +10,8 @@ namespace GyumolcsesAlma
     {
         static void Main(string[] args)
         {
+            Gyumolcs gy1 = new Gyumolcs("alma","piros",300);
+            Console.WriteLine(gy1);
         }
     }
 }
