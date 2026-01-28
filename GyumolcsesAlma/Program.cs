@@ -10,8 +10,28 @@ namespace GyumolcsesAlma
     {
         static void Main(string[] args)
         {
-            Gyumolcs gy1 = new Gyumolcs("alma","piros",300);
-            Console.WriteLine(gy1);
+
+            List<Gyumolcs> gyumolcsok = new List<Gyumolcs>();
+            gyumolcsok.Add(new Gyumolcs("banán","sárga",200));
+            gyumolcsok.Add(new Alma("alma", "zöld", 350, "Gala"));
+            gyumolcsok.Add(new Gyumolcs("sárkánygyülmöcs", "lila", 300));
+            gyumolcsok.Add(new Alma("alma", "sárga", 100, "Jonagold"));
+
+
+
+            int alma = 0;
+            int nemAlma = 0;
+
+            foreach (var gyumolcs in gyumolcsok)
+            {
+                if (gyumolcs is Alma)
+                    alma++;
+                else
+                    nemAlma++;
+            }
+
+
+            Console.WriteLine($"A listában {alma} db alma van és {nemAlma} db nem alma.");
         }
     }
 }
